@@ -20,3 +20,12 @@ This guide walks through the setup of **Cowrie**, a medium-interaction SSH and T
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install git python3-venv python3-pip libssl-dev libffi-dev build-essential libpython3-dev libyaml-dev libxslt1-dev -y
+git clone https://github.com/cowrie/cowrie.git
+cd cowrie
+python3 -m venv cowrie-env
+source cowrie-env/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+cp etc/cowrie.cfg.dist etc/cowrie.cfg
+bin/cowrie start
+
