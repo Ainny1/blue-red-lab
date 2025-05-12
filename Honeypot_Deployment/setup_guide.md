@@ -17,15 +17,25 @@ This guide walks through the setup of **Cowrie**, a medium-interaction SSH and T
 
 ### 1. System Preparation
 
+Before you begin, make sure you're using a **non-root user** with `sudo` privileges. This helps reduce risk and aligns with best practices for running honeypots.
+
+#### Check Python version:
 ```bash
+python3 --version
+Ensure Python 3.6 or higher is installed.
+
+Update your system and install required dependencies:
 sudo apt update && sudo apt upgrade -y
-sudo apt install git python3-venv python3-pip libssl-dev libffi-dev build-essential libpython3-dev libyaml-dev libxslt1-dev -y
-git clone https://github.com/cowrie/cowrie.git
-cd cowrie
-python3 -m venv cowrie-env
-source cowrie-env/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-cp etc/cowrie.cfg.dist etc/cowrie.cfg
-bin/cowrie start
+sudo apt install git python3-venv python3-pip \
+libssl-dev libffi-dev build-essential \
+libpython3-dev libyaml-dev libxslt1-dev -y
+
+Check available disk space:
+
+df -h
+
+You should have at least 2 GB RAM and 20 GB of free disk space for a smooth deployment.
+#### 6. **Scroll Down to Commit**
+- In the **Commit message** box, type:
+
 
