@@ -33,9 +33,6 @@ libpython3-dev libyaml-dev libxslt1-dev -y
 Check available disk space:
 
 df -h
-
-You should have at least 2 GB RAM and 20 GB of free disk space for a smooth deployment.
-#### 6. **Scroll Down to Commit**
-- In the **Commit message** box, type:
+You should have at least 2 GB RAM and 20 GB of free disk space for a smooth deployment 
 
 
